@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" name="frm">
+        <input type="text" name="id">
+        <input type="password" name="pw">
+    </form>
+    <form action="">
+        <label for="apple"><input type="checkbox" value="apple">사과</label>
+        <label for="banana"><input type="checkbox" value="banana">바나나</label>
+        <label for="orange"><input type="checkbox" value="orange">오렌지</label>
+        <label for="melon"><input type="checkbox" value="melon">멜론</label>
+    </form>
+    <script>
+        // const aEl = document.createElement("a"); // 생성
+        // document.body.appendChild(aEl); //연결
+        // aEl.setAttribute("href", "https://naver.com")
+        // aEl.innerHTML = "a태그 추가" //추가
+
+        // document.frm.id.value = "DPR";
+        // document.frm.pw.value = "Ian1111"
+
+        // const ckEls = document.querySelectorAll("[typle = 'ceckblx']");
+        // for(let i = 0; i < dkEls.length; i++){
+        //     ckEls[i].checked = true;
+        // }
+
+        const ckEls=document.querySelectorAll("[type='radio']");
+        for(let i = 0; i <ckEls.length; i++){
+            // ckEls[i].ckecked=true;
+            if(ckEls.values === "orange") ckEls.checked = true;
+            }
+    </script>
+</body>
+</html>

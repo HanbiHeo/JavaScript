@@ -9,28 +9,54 @@
             padding: 0;
             box-sizing: border-box;
         }
-        img {
-            height: 250px;
-        }
         .container{
+            position: relative;
             display: block;
-            width: 300px;
+            width: 500px;
+            height: auto;
+            padding: 15px 20px;
+            margin: auto;
+        }
+        button{
+            background-color: rgba(255,255,255,0.7);
+            padding: 5px;
+            border: 1px solid #ccc;
+            font-size: 0.8em;
+        }
+        .over {
+            position: absolute;
+            right: 90px;
+            bottom:30px        }
+        .detail{
+            width: 400px;
+            text-align: right;
+            line-height: 1.8;
+            /* display none으로 표시하면 */
+            display: none;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="/image/잇지.jpeg">
+        <img src="/image/잇지.jpeg" width="400px">
         <div class="box">
-            <h2>그룹 잇지</h2>
-            <p>팀명 'ITZY'는 '너희가 원하는 거 전부 있지? 있지!' 라는 뜻을 가지고 있으며, 정식 한글 표기법은 있지이다. 혹 영어명인 'ITZY'로만 들어본 사람들이 한글로는 어떻게 적는지 몰라 '잇지'라고 부르는 경우도 꽤 많이 있는데, '있지'라고 불러야 한다며 정정해주는 것이 팬덤 잇지에게는 일상이 되었다.</p>
+            <button class="over" id="open" onclick="showDetaile()">상세설명보기</button>
+            <div id="desc" class="detail">
+                <h2>그룹 잇지</h2>
+                <p>팀명 'ITZY'는 '너희가 원하는 거 전부 있지? 있지!' 라는 뜻을 가지고 있으며, 정식 한글 표기법은 있지이다. 혹 영어명인 'ITZY'로만 들어본 사람들이 한글로는 어떻게 적는지 몰라 '잇지'라고 부르는 경우도 꽤 많이 있는데, '있지'라고 불러야 한다며 정정해주는 것이 팬덤 잇지에게는 일상이 되었다.</p>
+                <button id="close" onclick="hideDetail()">상세설명닫기</button>
+            </div>
         </div>
-        <button onclick="">상세설명보기</button>
     </div>
 
     <script>
-        function newRegister(){
-            
+        function showDetaile(){
+            document.querySelector('#desc').style.display = "block";
+            document.querySelector('#open').style.dispay = "none";
+        }
+        function hideDetail(){
+            document.querySelector('#desc').style.display = "block";
+            document.querySelector('#open').style.dispay = "none";
         }
     </script>
 </body>

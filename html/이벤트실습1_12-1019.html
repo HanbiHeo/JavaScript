@@ -7,6 +7,7 @@
         *{
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
         .container{
             padding: 10px;
@@ -23,23 +24,27 @@
             list-style: none;
             text-align: center;
             gap: 10px;
+            justify-content: center;
         }
         li{
-            padding: 5px;
-            width: 80px;
+            padding: 5px 15px;
+            width: 200px;
             height: 30px;
             font-weight: bold;
+            flex-grow: 1; /*남는 공간을 특정 비율에 맞춤*/
+            align-items: center;
         }
         .green{background-color: green;}
         .orange{background-color: orange;}
         .purple{background-color: purple;}
         .result{
+            width: 500px;
+            height: 150px;
             margin: 10px;
+            border-radius: 20%;
             display: flex;
             justify-content: center;
             align-items:center;
-            width: 200px;
-            height: 100px;
         }
     </style>
 </head>
@@ -54,7 +59,16 @@
     </div>
     <script>
         function change(color){
-            let result = document.querySelector(".result");
+            const result = document.querySelector(".result");
+
+
+            //-- 기능 복습 및 구현 필요 --
+            // for(let i = 0; i < result.length; i++){
+            //     result[i].addEvenListener("click", function() {
+            //         alert(`${this.textContent} 버튼이 눌려졌음.`);
+            //     })
+            // }
+
             result.style.backgroundColor=color;
         }
     </script>
